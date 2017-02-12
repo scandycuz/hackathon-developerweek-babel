@@ -16,7 +16,7 @@ var options = {
 var languages = require('./languages');
 
 var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://localhost:5432/babeldb';
+var connectionString = 'postgres://https://flock-babel.herokuapp.com/babeldb';
 var db = pgp(connectionString);
 
 // add query functions
