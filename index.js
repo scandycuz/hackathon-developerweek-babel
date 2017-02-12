@@ -9,7 +9,7 @@ flock.appId = config.appId;
 flock.appSecret = config.appSecret;
 
 var app = express();
-app.listen("https://flock-babel.herokuapp.com/");
+app.listen(3000);
 
 app.get("/", function(req, res) {
   res.send(`<div style='width: 100%;
