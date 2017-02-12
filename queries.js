@@ -29,7 +29,7 @@ module.exports = {
 };
 
 var fullTranslationLanguage = "English";
-var translationLanguage = "en";
+var targetLanguage = "en";
 
 function saveToken(req, res, next) {
   var user = {userId: req.userId, token: req.token};
