@@ -65,10 +65,24 @@ function setTranslationLanguage(event, callback) {
   fullTranslationLanguage = language;
   if (languages[`${language}`]) {
     language = languages[`${language}`];
-    translationLanguage = language;
-    callback(null, {text: `Translation language set to ${originalInput}`});
+    targetLanguage = language;
+    var message = `Translation language set to ${originalInput}`;
+    var params = {
+      text: message,
+      to: targetLanguage
+    };
+    client.translate(params, function(err, data) {
+      callback(null, {text: data});
+    });
   } else {
-    callback(null, {text: "That language is not availabe for translation"});
+    var message = "That language is not availabe for translation";
+    var params = {
+      text: message,
+      to: targetLanguage
+    };
+    client.translate(params, function(err, data) {
+      callback(null, {text: data});
+    });
   }
 }
 
@@ -85,7 +99,7 @@ function translateMessages(messages, user) {
 
     var params = {
       text: text,
-      to: translationLanguage
+      to: targetLanguage
     };
     client.translate(params, function(err, data) {
       sendTranslation(text, data, user);
