@@ -8,3 +8,6 @@ CREATE TABLE users (
   userid VARCHAR,
   token VARCHAR
 );
+
+INSERT INTO users (userid, token)
+  VALUES ('test_id', 'test_token');
