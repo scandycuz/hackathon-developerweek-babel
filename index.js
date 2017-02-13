@@ -11,11 +11,11 @@ flock.appId = config.appId;
 flock.appSecret = config.appSecret;
 
 var app = express();
+app.use(favicon('./public/favicon.ico'));
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
-app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.get("/", function(req, res) {
   res.send(`<div style='width: 100%;
