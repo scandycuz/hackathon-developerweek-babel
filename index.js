@@ -9,7 +9,9 @@ flock.appId = config.appId;
 flock.appSecret = config.appSecret;
 
 var app = express();
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);
+console.log("Listening on port " + port);
 
 app.get("/", function(req, res) {
   res.send(`<div style='width: 100%;
