@@ -17,7 +17,7 @@ app.get("/", function(req, res) {
             display:flex;
             justify-content: center;
             align-items:center;'>
-            <h1>Babler</h1></div>`);
+            <h1>Babel</h1></div>`);
 });
 
 app.post('/users', db.saveToken);
