@@ -16,6 +16,7 @@ var options = {
 var languages = require('./languages');
 
 var pgp = require('pg-promise')(options);
+pgp.pg.defaults.ssl = true;
 var connectionString = 'postgres://localhost:5432/babeldb';
 var db = pgp(connectionString);
 
