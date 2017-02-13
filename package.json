@@ -13,6 +13,8 @@
     "bluebird": "^3.4.7",
     "express": "^4.14.1",
     "flockos": "0.0.6",
+    "foreman": "^2.0.0",
+    "heroku": "^0.2.0",
     "mstranslator": "^2.1.1",
     "pg-promise": "^5.5.6"
   }
