@@ -13,17 +13,24 @@ var flock = require('flockos');
 
 var languages = require('./languages');
 
+var pgp = require('pg-promise')(options);
+var options = {
+  // Initialization Options
+  promiseLib: promise
+};
+pgp.pg.defaults.ssl = true;
+
 // development database
 if (app.settings.env === "development") {
-  var pgp = require('pg-promise')(options);
-  var options = {
-    // Initialization Options
-    promiseLib: promise
-  };
-  pgp.pg.defaults.ssl = true;
   var connectionString = 'postgres://localhost:5432/babeldb';
-  var db = pgp(connectionString);
 }
+// production database
+if (app.settings.env === "production") {
+  var connectionString = 'postgres://udqlmldvxupapd:7aec70c86d9ad585c5342773c19f29db9a7d02111c2c19537acfa96dbd4778d6@ec2-54-243-55-1.compute-1.amazonaws.com:5432/dehb0buqj333e7';
+}
+
+var db = pgp(connectionString);
+
 
 // add query functions
 
