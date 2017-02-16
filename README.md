@@ -7,8 +7,6 @@ I created Babel as a submission to the 2017 DeveloperWeek Hackathon in San Franc
 * Provide users with a slash command to set the target translation language
 * Node JS back-end integrates with a PostgreSQL database to store user data and settings
 
-![flock logo](public/flock-logo.png)
-
 ## Code Samples
 
 Use event data from the Flock API to retrieve and translate messages:
