@@ -1,15 +1,15 @@
 # Babel
 
-Babel is an application I created as a submission to the 2017 DeveloperWeek Hackathon in San Francisco in response to a challenge created by [Flock](https://www.flock.co/). The challenge was to create an application that added functionality to their team messenger platform. The Babel application utilizes the Microsoft Translation API to add translation functionality.
+I created Babel as a submission to the 2017 DeveloperWeek Hackathon in San Francisco in response to a challenge created by [Flock](https://www.flock.co/). The challenge was to create an application that added functionality to their team messaging platform. Babel utilizes the Microsoft Translation API to add translation functionality.
 
 ## Features
 
-* Provides users with a slash command that enables them to choose the target translation language.
-* Node JS back-end integrates with a PostgreSQL database to store user data and settings.
+* Provides users with a slash command to set the target translation language
+* Node JS back-end integrates with a PostgreSQL database to store user data and settings
 
 ## Code Samples
 
-Function using event data from the Flock API to retrieve and translate the messages:
+Use event data from the Flock API to retrieve and translate the messages:
 
 ```javascript
 const retrieveUserMessages = (event, callback) => {
@@ -29,7 +29,7 @@ const retrieveUserMessages = (event, callback) => {
   });
 }
 ```
-Function to translate messages and return to Flock:
+Translate messages and send to Flock:
 
 ```javascript
 const translateMessages = (messages, user) => {
@@ -45,11 +45,12 @@ const translateMessages = (messages, user) => {
 }
 ```
 
-## Languages, Frameworks, Libraries, Etc.
+## Languages, Frameworks, Database and Libraries
 
+* JavaScript
 * Express
 * NodeJS
 * PostgreSQL
-* NPM Packages
+* Packages
   * pg-promise
   * bluebird

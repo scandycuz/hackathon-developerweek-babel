@@ -149,9 +149,3 @@ function retrieveUserMessages(event, callback) {
     });
   });
 }
-
-
-
-
-
-//
