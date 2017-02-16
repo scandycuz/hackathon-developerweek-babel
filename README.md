@@ -9,7 +9,7 @@ I created Babel as a submission to the 2017 DeveloperWeek Hackathon in San Franc
 
 ## Code Samples
 
-Use event data from the Flock API to retrieve and translate the messages:
+Use event data from the Flock API to retrieve and translate messages:
 
 ```javascript
 const retrieveUserMessages = (event, callback) => {
@@ -29,7 +29,7 @@ const retrieveUserMessages = (event, callback) => {
   });
 }
 ```
-Translate messages and send to Flock:
+Translate messages and return to Flock:
 
 ```javascript
 const translateMessages = (messages, user) => {
